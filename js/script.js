@@ -1,7 +1,6 @@
 
 
-// chiedere all'utente di inserire una parola
-// creare una funzione per capire se la parola è palindroma
+
 /////////
 
 // l'utente sceglie pari o dispari
