@@ -17,36 +17,66 @@ console.log('numero Utente', numUtente);
 // console.log('numero Pc', numPc);
 
 // generiamo un numero random per il pc usando una funzione
-let variable = randomPc();
-console.log('numero Pc', variable);
+let numPc = randomPc(1, 5);
+console.log('numero Pc', numPc);
 
-function randomPc(){
-
-    let numPc = Math.floor(Math.random()*5)+1;
-    
-    return numPc;
+function randomPc(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+let somma = sommareNumeri('somma', numUtente, numPc);
+// console.log('somma', somma);
+
+function sommareNumeri(operatore, num1, num2){
+      switch(operatore){
+      case 'somma':
+      return num1 + num2;
+    }
+}
+
+let pariDisp = pariODispari(somma);
+console.log(pariDisp);
+
+function pariODispari(somma){
+    if(somma % 2 === 0){
+        return 'pari'
+    }else{
+        return 'dispari'
+    }
+}
+if(parolaUtente === pariDisp){
+    console.log('Hai vinto');
+}else{
+    console.log('Hai perso');
+}
+
+// function randomPc(){
+
+//     let numPc = Math.floor(Math.random()*5)+1;
+    
+//     return numPc;
+// }
 
 // sommiamo i due numeri
 // stabiliamo se la somma è pari o dispari
 
-let somma = sommareNumeri();
+// let somma = sommareNumeri();
 
-function sommareNumeri(){
-let sommaNum = numUtente + variable;
-console.log(sommaNum);
-if(!(sommaNum % 2)){
-    console.log('la somma è pari');
-}else{
-    console.log('la somma è dispari');
-}
-return sommaNum
-}
+// function sommareNumeri(){
+// let sommaNum = numUtente + variable;
+// console.log(sommaNum);
+// if(!(sommaNum % 2)){
+//     console.log('la somma è pari');
+// }else{
+//     console.log('la somma è dispari');
+// }
+// return sommaNum
+// }
 
 // dichiariamo chi ha vinto
 // 
-if(somma === parolaUtente){
-    console.log('hai vinto');
-}else{
-    console.log('hai perso');
-}
+// if(somma === parolaUtente){
+//     console.log('hai vinto');
+// }else{
+//     console.log('hai perso');
+// }
