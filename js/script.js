@@ -50,6 +50,30 @@ if(parolaUtente === pariDisp){
     console.log('Hai perso');
 }
 
+
+// es parolaPalindroma
+const parolaInserita = 'anna';
+console.log(parolaInserita);
+
+if(isPalindroma(parolaInserita)){
+    console.log('la parola è palindroma');
+}else{
+    console.log('la parola non è palindroma');
+}
+
+function isPalindroma(parola){
+    // giro la parola
+    let parolaGirata = '';
+    for( let i = parola.length - 1; i >= 0; i--){
+          parolaGirata += parola[i];
+          console.log(parolaGirata);
+    }
+    if(parolaGirata === parolaInserita) return true;
+    return false;
+}
+
+
+
 // function randomPc(){
 
 //     let numPc = Math.floor(Math.random()*5)+1;
